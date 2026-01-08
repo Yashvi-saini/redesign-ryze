@@ -22,7 +22,7 @@ const Hero = () => {
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-orange-300 text-xs font-medium tracking-wide mb-8 backdrop-blur-sm"
                     >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#FF4801] animate-pulse" />
-                        AI COPILOT FOR PERFORMANCE MARKETERS
+                        Ryze is live! Book a demo to see it in action.
                     </motion.div>
 
                     <h1 className="text-5xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-5xl mx-auto leading-[1]">
