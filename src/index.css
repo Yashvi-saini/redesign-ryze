@@ -43,8 +43,23 @@
     }
 }
 
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 .animate-blob {
     animation: blob 7s infinite;
+}
+
+.animate-infinite-scroll {
+    animation: infinite-scroll 60s linear infinite;
+    width: max-content;
 }
 
 .animation-delay-2000 {

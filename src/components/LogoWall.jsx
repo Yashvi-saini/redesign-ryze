@@ -18,7 +18,7 @@ const LogoWall = () => {
         { name: 'Willys', src: '/src/assets/images/willys_logo.png' },
         { name: 'Directly', src: '/src/assets/images/directly_logo.png' },
     ];
-    const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
+    const repeatedLogos = [...logos, ...logos];
 
     return (
         <section className="py-12 border-y border-white/5 overflow-hidden bg-black/20 backdrop-blur-sm">
@@ -28,19 +28,8 @@ const LogoWall = () => {
                 </p>
             </div>
 
-            <div className="relative flex overflow-x-hidden group no-scrollbar">
-                <motion.div
-                    className="flex gap-16 items-center whitespace-nowrap"
-                    animate={{ x: [0, -2000] }}
-                    transition={{
-                        x: {
-                            repeat: Infinity,
-                            repeatType: "loop",
-                            duration: 50,
-                            ease: "linear",
-                        }
-                    }}
-                >
+            <div className="relative flex overflow-hidden group no-scrollbar">
+                <div className="flex gap-16 items-center animate-infinite-scroll hover:pause">
                     {repeatedLogos.map((logo, index) => (
                         <div key={index} className="flex-shrink-0 w-32 flex justify-center opacity-50 hover:opacity-100 transition-all duration-300">
                             <img
@@ -51,7 +40,7 @@ const LogoWall = () => {
                             />
                         </div>
                     ))}
-                </motion.div>
+                </div>
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#030014] to-transparent z-10" />
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#030014] to-transparent z-10" />
             </div>
