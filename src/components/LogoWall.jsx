@@ -1,22 +1,36 @@
-import { motion } from 'framer-motion';
+import googleAds from '../assets/images/Google_Ads.svg';
+import meta from '../assets/images/meta-logo.png';
+import chatgpt from '../assets/images/chatgpt-logo.png';
+import speedy from '../assets/images/speedy-logo.svg';
+import motif from '../assets/images/motif_digital.png';
+import caleyx from '../assets/images/caleyx-logo.png';
+import xLogo from '../assets/images/X-Logo1.png';
+import amazon from '../assets/images/amazon-logo.png';
+import hg from '../assets/images/hg_logo.png';
+import mos from '../assets/images/mos_logo.png';
+import pupil from '../assets/images/pupil_logo.png';
+import ritma from '../assets/images/ritma_logo.png';
+import tetra from '../assets/images/tetra_logo.png';
+import willys from '../assets/images/willys_logo.png';
+import directly from '../assets/images/directly_logo.png';
 
 const LogoWall = () => {
     const logos = [
-        { name: 'Google Ads', src: '/src/assets/images/Google_Ads.svg' },
-        { name: 'Meta', src: '/src/assets/images/meta-logo.png' },
-        { name: 'ChatGPT', src: '/src/assets/images/chatgpt-logo.png' },
-        { name: 'Speedy', src: '/src/assets/images/speedy-logo.svg' },
-        { name: 'Motif', src: '/src/assets/images/motif_digital.png' },
-        { name: 'Caleyx', src: '/src/assets/images/caleyx-logo.png' },
-        { name: 'X', src: '/src/assets/images/X-Logo1.png' },
-        { name: 'Amazon', src: '/src/assets/images/amazon-logo.png' },
-        { name: 'HG', src: '/src/assets/images/hg_logo.png' },
-        { name: 'MOS', src: '/src/assets/images/mos_logo.png' },
-        { name: 'Pupil', src: '/src/assets/images/pupil_logo.png' },
-        { name: 'Ritma', src: '/src/assets/images/ritma_logo.png' },
-        { name: 'Tetra', src: '/src/assets/images/tetra_logo.png' },
-        { name: 'Willys', src: '/src/assets/images/willys_logo.png' },
-        { name: 'Directly', src: '/src/assets/images/directly_logo.png' },
+        { name: 'Google Ads', src: googleAds },
+        { name: 'Meta', src: meta },
+        { name: 'ChatGPT', src: chatgpt },
+        { name: 'Speedy', src: speedy },
+        { name: 'Motif', src: motif },
+        { name: 'Caleyx', src: caleyx },
+        { name: 'X', src: xLogo },
+        { name: 'Amazon', src: amazon },
+        { name: 'HG', src: hg },
+        { name: 'MOS', src: mos },
+        { name: 'Pupil', src: pupil },
+        { name: 'Ritma', src: ritma },
+        { name: 'Tetra', src: tetra },
+        { name: 'Willys', src: willys },
+        { name: 'Directly', src: directly },
     ];
     const repeatedLogos = [...logos, ...logos];
 
