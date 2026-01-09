@@ -1,13 +1,26 @@
 import { motion } from 'framer-motion';
 import { Twitter, Star, Linkedin, Trophy, TrendingUp } from 'lucide-react';
 
-const TweetCard = ({ name, handle, content, date, platform = "twitter" }) => (
+import wall3 from '../assets/images/wall-3.jpg';
+import ashleyCover from '../assets/images/ashley_cover.png';
+import motifCover from '../assets/images/motif_cover.png';
+
+import face1 from '../assets/images/man_face1.png';
+import face2 from '../assets/images/man-face2.png';
+import face3 from '../assets/images/woman_face3.jpg';
+import face4 from '../assets/images/face4_man.png';
+import face5 from '../assets/images/face5_woman.png';
+
+const TweetCard = ({ name, handle, content, date, platform = "twitter", avatar }) => (
     <div className="bg-[#0F0A1F] border border-white/10 p-6 rounded-2xl mb-6 hover:border-[#FF4801]/30 transition-colors">
         <div className="flex justify-between items-start mb-4">
             <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-slate-700 overflow-hidden">
-                    {/* Placeholder Avatar */}
-                    <div className="w-full h-full bg-gradient-to-tr from-purple-500 to-orange-500" />
+                    {avatar ? (
+                        <img src={avatar} alt={name} className="w-full h-full object-cover" />
+                    ) : (
+                        <div className="w-full h-full bg-gradient-to-tr from-purple-500 to-orange-500" />
+                    )}
                 </div>
                 <div>
                     <h4 className="text-white font-bold text-sm">{name}</h4>
@@ -27,9 +40,10 @@ const TweetCard = ({ name, handle, content, date, platform = "twitter" }) => (
     </div>
 );
 
-const ImageCard = ({ height = "h-64", overlayText }) => (
+const ImageCard = ({ height = "h-64", overlayText, src }) => (
     <div className={`relative ${height} rounded-2xl overflow-hidden mb-6 group`}>
-        <div className="absolute inset-0 bg-slate-800 animate-pulse" /> 
+        <div className="absolute inset-0 bg-slate-800 animate-pulse" />
+        {src && <img src={src} alt={overlayText || "Wall of love"} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10" />
         <div className="absolute bottom-0 left-0 p-6 z-20">
             {overlayText && <p className="text-white font-bold">{overlayText}</p>}
@@ -75,15 +89,17 @@ const WallOfLove = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Column 1 */}
                     <div className="flex flex-col">
-                        <ImageCard height="h-80" overlayText="Scaling at the summit 🚀" />
+                        <ImageCard height="h-80" src={wall3} overlayText="Scaling at the summit 🚀" />
                         <TweetCard
                             name="Roger Dunn"
                             handle="roger_growth"
+                            avatar={face1}
                             content="We were drowning with 7 people. Got back so many hours each week from reporting. Finally have bandwidth to focus on actual strategy."
                         />
                         <TweetCard
                             name="Gabriela K."
                             handle="gabriela_agency"
+                            avatar={face3}
                             content="Our agency does audits for potential clients 5x faster now. Used to take days, now it's like an hour. Way easier to win new business."
                             platform="twitter"
                         />
@@ -105,6 +121,7 @@ const WallOfLove = () => {
                         <TweetCard
                             name="Daniel Amezquita"
                             handle="daniel_adz"
+                            avatar={face2}
                             content="Broke down performance by asset—thumbnails, headlines, everything. Suggested swaps based on real data. Our CTR basically doubled."
                             platform="linkedin"
                         />
@@ -113,7 +130,7 @@ const WallOfLove = () => {
 
                     {/* Column 3 */}
                     <div className="flex flex-col">
-                        <ImageCard height="h-64" overlayText="Partner Summit 2025" />
+                        <ImageCard height="h-64" src={ashleyCover} overlayText="Partner Summit 2025" />
                         <div className="bg-[#0F0A1F] border border-white/10 p-6 rounded-2xl mb-6">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-3">
@@ -144,7 +161,7 @@ const WallOfLove = () => {
                             <p className="text-slate-300 text-sm mb-2">Caught that our conversion tracking was double-counting. We had no idea for like 3 months. Fixed it and everything made way more sense.</p>
                             <p className="text-slate-500 text-xs font-bold">- Elena M.</p>
                         </div>
-                        <ImageCard height="h-48" />
+                        <ImageCard height="h-48" src={motifCover} />
                     </div>
                 </div>
             </div>

@@ -144,15 +144,15 @@ const AccountAudits = () => {
     ];
 
     return (
-        <div className="p-8 flex flex-col justify-center h-full">
-            <div className="space-y-6">
+        <div className="p-4 flex flex-col justify-center h-full">
+            <div className="space-y-4">
                 {audits.map((item, i) => (
                     <div key={i} className="group cursor-default">
-                        <div className="flex items-baseline justify-between mb-1">
-                            <h4 className="font-bold text-slate-900">{item.label}</h4>
-                            <span className={`font-black text-xl ${item.color}`}>{item.score}</span>
+                        <div className="flex items-baseline justify-between mb-0.5">
+                            <h4 className="font-bold text-slate-900 text-xs">{item.label}</h4>
+                            <span className={`font-black text-sm ${item.color}`}>{item.score}</span>
                         </div>
-                        <p className="text-xs text-slate-500 leading-relaxed group-hover:text-slate-700 transition-colors">
+                        <p className="text-[10px] text-slate-500 leading-tight group-hover:text-slate-700 transition-colors line-clamp-2">
                             {item.desc}
                         </p>
                     </div>
@@ -164,33 +164,33 @@ const AccountAudits = () => {
 
 const BudgetReallocation = () => {
     const platforms = [
-        { name: "LinkedIn", logo: "https://www.get-ryze.ai/_next/image?url=%2Fimages%2Fplatforms%2Flinkedin.png&w=48&q=75", spend: "$1,250", progress: "w-[30%]" },
-        { name: "ChatGPT", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/chatgpt-logo.png?alt=media", spend: "$1,250", progress: "w-[60%]" },
-        { name: "Meta", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/meta-logo.png?alt=media", spend: "$1,250", progress: "w-[80%] bg-green-500" },
-        { name: "Google", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/Google_Ads.svg?alt=media", spend: "$1,250", progress: "w-[40%]" },
-        { name: "Reddit", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/reddit-logo.png?alt=media", spend: "$1,250", progress: "w-[70%]" },
-        { name: "Perplexity", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/perplexity-color.png?alt=media", spend: "$1,250", progress: "w-[90%] bg-green-500" },
-        { name: "Amazon", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/amazon-logo.png?alt=media", spend: "$1,250", progress: "w-[50%]" },
-        { name: "X", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/X-Logo.png?alt=media", spend: "$1,250", progress: "w-[25%]" },
+        { name: "LinkedIn", logo: "https://www.get-ryze.ai/_next/image?url=%2Fimages%2Fplatforms%2Flinkedin.png&w=48&q=75", spend: "$502", progress: "w-[30%]" },
+        { name: "ChatGPT", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/chatgpt-logo.png?alt=media", spend: "$879", progress: "w-[60%]" },
+        { name: "Meta", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/meta-logo.png?alt=media", spend: "$1,883", progress: "w-[80%] bg-green-500" },
+        { name: "Google", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/Google_Ads.svg?alt=media", spend: "$2,176", progress: "w-[40%]" },
+        { name: "Reddit", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/reddit-logo.png?alt=media", spend: "$335", progress: "w-[70%]" },
+        { name: "Perplexity", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/perplexity-color.png?alt=media", spend: "$2,008", progress: "w-[90%] bg-green-500" },
+        { name: "Amazon", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/amazon-logo.png?alt=media", spend: "$1,757", progress: "w-[50%]" },
+        { name: "X", logo: "https://firebasestorage.googleapis.com/v0/b/dotted-music-473906-n7.firebasestorage.app/o/X-Logo.png?alt=media", spend: "$460", progress: "w-[25%]" },
     ];
 
     return (
-        <div className="p-8 h-full">
-            <div className="space-y-5">
+        <div className="p-4 h-full">
+            <div className="space-y-3">
                 {platforms.map((p, i) => (
-                    <div key={i} className="flex items-center gap-4">
-                        <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
-                            <img src={p.logo} alt={p.name} className="w-6 h-6 object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
+                    <div key={i} className="flex items-center gap-3">
+                        <div className="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                            <img src={p.logo} alt={p.name} className="w-5 h-5 object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
                         </div>
-                        <div className="flex-grow h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="flex-grow h-1.5 bg-slate-100 rounded-full overflow-hidden">
                             <div className={`h-full rounded-full ${p.progress.includes('bg-') ? '' : 'bg-slate-300'} ${p.progress}`} />
                         </div>
-                        <div className="font-mono text-xs font-bold text-slate-700">{p.spend}</div>
+                        <div className="font-mono text-[10px] font-bold text-slate-700 w-10 text-right">{p.spend}</div>
                     </div>
                 ))}
             </div>
-            <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-center gap-2 text-slate-400 text-xs uppercase tracking-widest font-bold">
-                <div className="w-2 h-2 rounded-full bg-slate-300 animate-pulse" />
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-center gap-2 text-slate-400 text-[10px] uppercase tracking-widest font-bold">
+                <div className="w-1.5 h-1.5 rounded-full bg-slate-300 animate-pulse" />
                 Reallocating Budget...
             </div>
         </div>
@@ -218,26 +218,24 @@ const Features = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Row 1 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <FeatureCard title="Keyword optimization">
                         <KeywordOptimization />
                     </FeatureCard>
 
-                    <FeatureCard title="Creative generation" className="lg:row-span-1">
+                    <FeatureCard title="Creative generation">
                         <CreativeGeneration />
                     </FeatureCard>
 
-                    <FeatureCard title="Creative analysis" className="lg:row-span-1">
+                    <FeatureCard title="Creative analysis">
                         <CreativeAnalysis />
                     </FeatureCard>
 
-                    {/* Row 2 */}
-                    <FeatureCard title="Account audits" className="md:col-span-1">
+                    <FeatureCard title="Account audits">
                         <AccountAudits />
                     </FeatureCard>
 
-                    <FeatureCard title="Budget reallocation" className="md:col-span-1 lg:col-span-2">
+                    <FeatureCard title="Budget reallocation">
                         <BudgetReallocation />
                     </FeatureCard>
                 </div>

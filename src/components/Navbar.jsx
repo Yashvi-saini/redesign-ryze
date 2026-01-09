@@ -18,7 +18,6 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Case Studies', path: '/case-studies' },
         { name: 'About Us', path: '/about' },
-        { name: 'Pricing', path: '/pricing' },
     ];
 
     return (
@@ -27,8 +26,8 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 className={`w-full max-w-5xl rounded-full transition-all duration-300 ${scrolled
-                        ? 'bg-[#030014]/60 backdrop-blur-xl border border-white/10 shadow-lg shadow-purple-900/10'
-                        : 'bg-transparent border border-transparent'
+                    ? 'bg-[#030014]/60 backdrop-blur-xl border border-white/10 shadow-lg shadow-purple-900/10'
+                    : 'bg-transparent border border-transparent'
                     }`}
             >
                 <div className="px-6 md:px-8 py-3 flex items-center justify-between">
