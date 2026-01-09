@@ -15,6 +15,17 @@ A side-by-side comparison illustrating the design evolution from the original co
 | :---: | :---: |
 | <img src="public/homeold.png" width="400" alt="Landing Page Before" /> | <img src="public/homenew1.png" width="400" alt="Landing Page After" /> |
 
+<br/>
+
+### Additional Screens
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <img src="public/homenew2.png" width="400" alt="Home Screen 2" />
+  <img src="public/homenew3.png" width="400" alt="Home Screen 3" />
+  <img src="public/homenew4.png" width="400" alt="Home Screen 4" />
+  <img src="public/homenew5.png" width="400" alt="Home Screen 5" />
+</div>
+
 ### Case Studies
 | Before | After |
 | :---: | :---: |
