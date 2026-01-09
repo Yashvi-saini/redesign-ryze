@@ -10,10 +10,15 @@ const LogoWall = () => {
         { name: 'Caleyx', src: '/src/assets/images/caleyx-logo.png' },
         { name: 'X', src: '/src/assets/images/X-Logo1.png' },
         { name: 'Amazon', src: '/src/assets/images/amazon-logo.png' },
+        { name: 'HG', src: '/src/assets/images/hg_logo.png' },
+        { name: 'MOS', src: '/src/assets/images/mos_logo.png' },
+        { name: 'Pupil', src: '/src/assets/images/pupil_logo.png' },
+        { name: 'Ritma', src: '/src/assets/images/ritma_logo.png' },
+        { name: 'Tetra', src: '/src/assets/images/tetra_logo.png' },
+        { name: 'Willys', src: '/src/assets/images/willys_logo.png' },
+        { name: 'Directly', src: '/src/assets/images/directly_logo.png' },
     ];
-
-    // Tripling the list for seamless infinite scroll
-    const repeatedLogos = [...logos, ...logos, ...logos];
+    const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
     return (
         <section className="py-12 border-y border-white/5 overflow-hidden bg-black/20 backdrop-blur-sm">
@@ -23,15 +28,15 @@ const LogoWall = () => {
                 </p>
             </div>
 
-            <div className="relative flex overflow-x-hidden group">
+            <div className="relative flex overflow-x-hidden group no-scrollbar">
                 <motion.div
                     className="flex gap-16 items-center whitespace-nowrap"
-                    animate={{ x: [0, -1000] }}
+                    animate={{ x: [0, -2000] }}
                     transition={{
                         x: {
                             repeat: Infinity,
                             repeatType: "loop",
-                            duration: 30,
+                            duration: 50,
                             ease: "linear",
                         }
                     }}
@@ -47,8 +52,8 @@ const LogoWall = () => {
                         </div>
                     ))}
                 </motion.div>
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#030014] to-transparent" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#030014] to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#030014] to-transparent z-10" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#030014] to-transparent z-10" />
             </div>
         </section>
     );
