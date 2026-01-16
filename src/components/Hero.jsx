@@ -59,7 +59,7 @@ const DashboardPreview = () => {
                             { label: 'Conversions', val: '1,234', change: '+24%', icon: <Users className="text-blue-500" /> },
                             { label: 'CTR', val: '2.8%', change: '+1.1%', icon: <BarChart3 className="text-purple-500" /> },
                         ].map((stat, i) => (
-                            <div key={i} className="bg-white/5 border border-white/5 p-4 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors">
+                            <div key={i} className="bg-[#1A1A1A]/50 border border-white/5 p-4 rounded-xl hover:bg-white/10 transition-colors">
                                 <div className="flex justify-between items-start mb-2">
                                     <span className="text-slate-500 text-xs font-medium">{stat.label}</span>
                                     {stat.icon}
@@ -146,14 +146,6 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-orange-300 text-xs font-medium tracking-wide mb-8 backdrop-blur-sm"
-                    >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF4801] animate-pulse" />
-                        Ryze is live! Book a demo to see it in action.
-                    </motion.div>
 
                     <h1 className="text-5xl lg:text-8xl font-bold tracking-tight text-white mb-8 max-w-5xl mx-auto leading-[1]">
                         Let AI Manage <br />
@@ -189,14 +181,13 @@ const Hero = () => {
 
             {/* Dashboard Preview  */}
             <motion.div
-                initial={{ opacity: 0, y: 100, rotateX: 20 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 1 }}
-                style={{ perspective: '1000px' }}
                 className="mt-20 max-w-6xl mx-auto px-4"
             >
                 <div className="relative">
-                    <div className="absolute inset-0 rounded-2xl bg-[#FF4801]/5 blur-3xl -z-10" />
+                    <div className="absolute inset-0 rounded-2xl bg-[#FF4801]/10 -z-10 transform scale-105" />
                     <DashboardPreview />
                 </div>
             </motion.div>
